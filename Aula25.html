@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 25</title>
+
+    <script>
+
+    </script>
+
+</head>
+<body>
+    <h2>Linha 1</h2>
+    <p>Linha 2</p>
+    <h1>Linha 3</h1>
+    <p>Linha 4</p>
+    <h2>Linha 5</h2>
+    <hr/>
+    <script>
+
+    // <hr/> = Cria linha
+    // .length = Paramentro que retorna a quantidade de elementos
+    var tagsP=document.getElementsByTagName("p")
+
+    //var tagsP=document.getElementsByTagName("p")[2]
+    //document.write(tagsP[2].innerHTML)
+
+  for(var i=0;i<tagsP.length;i++)
+  {
+  tagsP[i].style.color="#f00"
+  }
+  document.getElementsByTagName("*")[9].innerHTML="NOVO TEXTO" // "*" -> Captura todas as tag da página. Tem que indicar qual é o índice 
+  document.getElementsByTagName("*")[9].style.color="#f566"
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 35</title>
+    <meta charset="UTF-8">
+    <style>
+        #dv1
+        {
+            width:100px;
+            height:100px;
+            border:1px solid #000;
+            background-color: #f00;
+        }
+    </style>
+    <script>
+
+        var tmp;
+
+        function mudaCor()
+        {
+            var obj=document.getElementById("dv1")
+            var r=Math.floor(Math.random()*255)
+            var g=Math.floor(Math.random()*255)
+            var b=Math.floor(Math.random()*255)
+            obj.style.backgroundColor="rgb("+r+","+g+","+b+")"
+        }
+        function iniciar()
+        {
+        tmp=setInterval(mudaCor,3000) // CRIA UM INTERVALO COM O TEMPO SELECIONADO
+        //var tmp=setTimeout(mudaCor,3000)  CHAMA SOMENTE UMA VEZ
+        //window.addEventListener("load", mudaCor)
+        }
+        function parar()
+        {
+            clearInterval(tmp)
+        }
+        function addEventos()
+        {
+        document.getElementById("bt1").addEventListener("click",iniciar)
+        document.getElementById("bt2").addEventListener("click",parar)
+
+        }
+        window.addEventListener("load",addEventos)
+
+    </script>
+</head>
+<body>
+    <div id="dv1"></div>
+    <br/>
+    <button id="bt1">Iniciar</button>
+    <button id="bt2">Parar</button>
+</body>

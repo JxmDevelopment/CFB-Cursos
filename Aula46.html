@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 46</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <p id="txt">Curso de Javascript - Aula 46 do curso de javascript</p>
+    <script>
+
+        var texto=document.getElementById("txt").innerHTML
+        var res=texto.match("Aula")
+        var res2=texto.match(/Javascript/ig)
+        document.write(res + "<br>")
+        document.write(res.length + "<br>")
+        document.write(res2 + " : " + res2.length+ "<br>")
+        document.write(res2[0]) // Possibilita trabalhar com Array
+/*
+i = Não diferencia letras maiúsculas de minúsculas
+g = Procura todas as palavras, e cada ocorrência é armazenada em uma posição do array
+m = Pesquisa normal sem armazenar em forma de array
+
+var res=texto.match(/[^oa]/ig) -> '^' exclui as letras 'o,a' da pesquisa
+var res=texto.match(/[a-g]/ig) -> Pesquisa todos os caracteres entre 'a & g'
+
+^ = Não
+| = Separador, não interfere na pesquisa
+*/
+    </script>
+</body>
+</html>

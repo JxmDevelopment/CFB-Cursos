@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 63</title>
+    <meta charset="UTF-8">
+    <style>
+        #painel
+        {
+            border:1px solid #000;
+            border-radius: 10px;
+            padding:15px;
+            width:150px;
+            height:100px;
+        }
+    </style>
+    <script> // [ VERIFICAR TAMANHO | MEDIDA DA PÁGINA ]
+    
+        var l,a,px,py,painel // largura,altura | posição x,y
+
+        function inicia()
+        {
+        l=window.innerWidth // [ INICIA ESTÁ DENTRO DO EVENTO LOAD ]
+        a=window.innerHeight
+        px=window.screenX
+        py=window.screenY
+            painel=document.getElementById("painel")
+            painel.innerHTML="L: "+l+" - A: "+a+"<br>X: "+px+" - Y: "+py
+
+        }
+        function largura()
+        {
+            l=window.innerWidth
+            painel.innerHTML=l
+        }
+        function altura()
+        {
+            a=window.innerHeight
+            painel.innerHTML=a
+        }
+        window.addEventListener("load",inicia)
+
+    </script>
+</head>
+<body>
+    <button onclick="largura()">Largura</button>
+    <button onclick="altura()">Altura</button>
+    <button onclick="inicia()">Ambos</button>
+    <div id="painel"></div>
+</body>
+</html>

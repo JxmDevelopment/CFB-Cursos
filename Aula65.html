@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 65</title>
+    <meta charset="UTF-8">
+    <style>
+        #painel
+        {
+          width:400px;
+          height:600px;  
+          border: 1px solid #000;
+          border-radius:10px;
+          padding:10px;
+        }
+    </style>
+    <script> // [ OBTER INFORMAÇÕES DO BROWSER ]
+    
+    var painel
+
+    function localizar(pos)
+    {
+        var c=pos.coords
+        painel.innerHTML+="Lat: " + c.latitude + " - Lon: " + c.longitude
+    }
+    
+    function verifica()
+    {
+        painel=document.getElementById("painel")
+        painel.innerHTML=("Nome do Browser: " + navigator.appName + "<hr><br>")
+        painel.innerHTML+=("Versão do Browser: " + navigator.appVersion + "<hr><br>") // += SE NÃO SUBSTITUI
+        painel.innerHTML+=("Cookies: " + navigator.cookieEnabled + "<hr><br>")
+        painel.innerHTML+=("Idioma: " + navigator.language + "<hr><br>")
+        painel.innerHTML+=("Online: " + navigator.onLine + "<hr><br>")
+        painel.innerHTML+=("S.O: " + navigator.platform + "<hr><br>")
+        painel.innerHTML+=("Engine: " + navigator.product + "<hr><br>")
+        painel.innerHTML+=("Agente: " + navigator.userAgent + "<hr><br>")
+        painel.innerHTML+=("Localização: " + navigator.geolocation.getCurrentPosition(localizar) + "<hr><br>")
+    }
+    window.addEventListener("load",verifica)
+
+    </script>
+</head>
+<body>
+    <div id="painel"></div>
+</body>
+</html>

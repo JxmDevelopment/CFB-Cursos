@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 40</title>
+    <style>
+        #jogador
+        {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: #00f;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <script>
+        
+        var jog;
+        var vel;
+        var dx;
+        var dy;
+        var px;
+        var py;
+        var anima;
+        var estado; // Movendo ou Parado
+
+        function inicia()
+        {
+            vel=2
+            dx=1  // 1 direita -1 esquerda
+            dy=0
+            px=0
+            py=0
+            estado=1 // Ativado [1=movendo | 2=parado]
+            jog=document.getElementById("jogador")
+            jog.addEventListener("click",moverParar) // Adicionou a função Mover e Parar
+/*            jog.addEventListener("click",function() // Quando clica no quadrado ele para
+            {
+                cancelAnimationFrame(anima) 
+            }) */
+            game()
+        }
+
+        function moverParar()
+        {
+            if(estado) // Considera que é um valor verdadeiro
+            {
+                estado=0
+                jog.style.backgroundColor="#f00" // Vermelho
+                cancelAnimationFrame(anima)
+            }
+            else
+            {
+                estado=1
+                jog.style.backgroundColor="#00f" // Azul
+                anima=requestAnimationFrame(game)
+            }
+        }
+
+        function game()
+        {
+            px+=(dx*vel) // PARA DIREITA || px-=(dx*vel) PARA ESQUERDA
+            py+=(dy*vel)
+            jog.style.left=px+"px" // "px" = Pixel
+            if(px > 800) // Controla o limite do quadrado
+            {
+                dx=-1
+            }
+            else if(px < 0)
+            {
+                dx=1
+            }
+            anima=requestAnimationFrame(game)
+
+        }
+
+        window.addEventListener("load",inicia)
+
+    </script>
+</head>
+<body>
+    <div id="jogador"></div>
+</body>
+</html>

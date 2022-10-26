@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 44</title>
+    <meta charset="UTF-8">
+    <style>
+        #dvslider
+        {
+            width:1000px;
+            height:300px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btSlider
+        {
+            background-color: rgba(black, black, black, 0.4);
+            height: 30%;
+            color:#fff;
+            cursor: pointer;
+            outline: none;
+            margin: 10px;
+            border: none;
+        }
+        #dvload
+        {
+            width:100px;
+            height: 5px;
+            margin-top: 25%;
+            border: 1px solid rgba(255, 255, 255, 0.3)
+        }
+        #dvbarra
+        {
+            width:0%;
+            height: 100%;
+            background-color: #fff;
+        }
+    </style>
+    <script>
+
+        // Height = 'altura' | cursor = 'maozinha do mouse' | outline = 'sumir borda' quando clica | 0.3 no border é 30% de opacidade
+        function preCarregamento() // pre-carregar a imagem
+        {
+            var s=1;
+            var slider;
+            var imgAtual;
+            var maxImg;
+            var tmp; // trocar imagem
+            var tempoTroca;
+            var vtempo;
+            var vbarra;
+
+            for(var i=0;i<5;i++)
+            {
+            imgs[i]= newImage();
+            imgs[i].src="imgs/s"+s+".jpg";
+            s++;
+            }
+        }
+
+        function carregarImg(img)
+        {
+            slider.style.backgroundImage="url('"+imgs[img].src+"')" // [img] ou [1]
+        }
+
+        function iniciar()
+        {
+            preCarregamento(); // Pre-carrega as imagens na memória
+            imgAtual=0; // Qual imagem vai ser mostrada
+            maxImg=imgs.length-1; // Porque ele vai dizer que a posição da última imagem é a 5, é a 4
+            slider=document.getElementById("dvslider") // Associo o elemento que vai receber as imagens
+            vbarra=document.getElementById("dvbarra")
+            carregarImg(imgAtual); // Carrega a imagem, para o slider não ficar sem imagem
+            tempoTroca=0;
+            anima()
+        }
+
+        function troca(dir) // pular para a próxima imagem
+        {
+            tempoTroca=0 // Quando troca tem que zerar o tempo
+            imgAtual+=dir // Porque vai adicionar '-1' a imagem anterior e '1' a próxima imagem
+            if(imgAtual>maxImg)
+            {
+                imgAtual=0 // Recomeçar o ciclo | Voltar para a primeira imagem
+            }
+            else if(imgAtual<0)
+            {
+                imgAtual=maxImg // Faz o loop oposto | Voltar para a última imagem "quando está na primeira"
+            }
+            carregarImg(imgAtual)
+        }
+
+        function anima()
+        {
+            tempoTroca++
+            if(tempoTroca >= 500)
+            {
+                tempoTroca=0
+                troca(1)
+            }
+            vtempo=tempoTroca/5 // O tempo está definido com '500' , então divide por 5 para o tempo ser 100
+            vbarra.style.width=vtempo+"%"
+            widow.requestAnimationFrame(anima)
+        }
+        window.addEventListener("load",iniciar)
+
+    </script>
+</head>
+<body>
+    <div id="dvslider">
+        <button class="btSlider" onclick="troca(-1)"><</button>
+        <div id="dvload">
+            <div id="dvbarra"></div>
+        </div>
+        <button class="btSlider" onclick="troca(1)">></button>
+    </div>
+</body>
+</html>

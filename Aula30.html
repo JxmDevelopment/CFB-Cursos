@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 30</title>
+    <meta charset="UTF-8">
+    
+</head>
+<body>
+    <script>
+
+        var numeros=new Array(10,2,5,30,25,19,20,50)
+
+        function media(nums) // Media = soma todos, e divide pelo número de elementos
+        {
+            var tam=nums.length
+            var soma=0
+            for(var i=0;i<tam;i++)
+            {
+                soma+=nums[i]
+            }
+            return Math.round(soma/tam) // Math.round = Arredonda o valor
+        }
+
+        document.write(media(numeros) + "<br>") // Pega função Media e o Array numeros 
+
+
+      function soma2(n1,n2)
+        {
+            return n1+n2
+        }
+        // var res = soma(7,7)
+        // document.write(res)
+        document.write(soma2(3,7) + "<br>")
+
+
+
+        function soma(n1,n2)
+        {
+            var res = n1+n2
+            document.write(res + "<br>")
+        }
+        soma(5,2)
+
+
+      function escreve()
+        {
+            document.write("Curso de JavaScript" + "<br>")
+        }
+
+        escreve()
+
+    </script>
+</body>
+</html>

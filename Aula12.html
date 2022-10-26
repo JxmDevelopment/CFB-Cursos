@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 12</title>
+</head>
+<body>
+    <script>
+        
+        var msg
+        var pos = Math.round(prompt ("Digite um número:")); // Se digitar 1 vai para o 'case 1' e assim por diante
+        switch(pos)
+        {
+            case 1:
+                msg="Primeiro Lugar ! Medalha de Ouro."
+                break
+            case 2:
+                msg="Segundo Lugar ! Medalha de Prata."
+                break
+            case 3:
+                msg="Terceiro Lugar ! Medalha de Bronze."
+                break
+            default:
+                msg="Não Obteve Medalha !"
+        }
+        switch(pos)
+        {
+            case 1:
+            case 2:
+            case 3:
+                msg+="<br><br>Subiu ao Pódio !"
+                break
+            default:
+                msg+="<br><br>Não Obteve Colocação !"
+        }
+        document.write(msg)
+
+    </script>
+</body>
+</html>

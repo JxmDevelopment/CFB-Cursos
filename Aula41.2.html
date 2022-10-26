@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 41</title>
+    <meta charset="UTF-8">
+    <style>
+        #quad
+        {
+            border: 1px solid #000;
+            background-color: #f00;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+
+        function contador(min,max) // RECURSIVIDADE
+        {
+            document.write(min+"<br>")
+            if(min<max)
+            {
+                contador(++min,max) // INCREMENTA E DEPOIS REALIZAR OPERAÇÃO | POS INCREMENTO -> REALIZA A OPERAÇÃO E DEPOIS INCREMENTA
+            }
+        }
+        //contador(0,10) // ATE ONDE VAI O CALCULO
+
+            function fatorial(n) // FATORIAL (5) = 5*4*3*2*1=120
+            {
+                if(n==1)
+                {
+                 return 1;
+                }
+                return n*fatorial(n-1)
+            }
+                document.write(fatorial(5))
+
+    </script>
+</head>
+<body>
+    <div id="quad"></div>
+    <script>
+        
+        var obj=document.getElementById("quad") // RODAR O QUADRADO
+        var ang=0
+        var anima;
+        function gira()
+        {
+            obj.style.transform="rotate("+ang+"deg)"; // INCREMENTA PARA FAZER O QUADRADO ROTACIONAR
+            ang++;
+            if(ang>360)
+            {
+                ang=0;
+            }
+            anima=requestAnimationFrame(gira);
+        }
+        gira(); // CHAMA A FUNÇÃO
+
+    </script>
+</body>
+</html>

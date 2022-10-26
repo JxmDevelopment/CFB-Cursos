@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 62</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script> // [ ABRIR NOVA JANELA | NOVA JANELA PERSONALIZADA ]
+
+    var newJanela;
+
+        function abreJ()
+        {
+            let minhaJanela=window.open("Aula62.1.html","aqui") // Abrir em nova aba (_blank) | Abrir na mesma janela (_self)
+        }
+        function persoJ()
+        {
+            newJanela=window.open("Aula62.1.html","_blank","width=300,height=300,top=300,left=1000")
+        }
+        function fechaJ()
+        {
+            newJanela.window.close()
+         // newJanela.close()
+        }
+        
+    </script>
+</head>
+<body>
+    <button onclick="abreJ()">Abre Nova Janela</button>
+    <button onclick="persoJ()">Abre Nova Janela Personalizada</button>
+    <button onclick="fechaJ()">Fechar Janela</button>
+    <iframe name="aqui" src=""></iframe>
+</body>
+</html>

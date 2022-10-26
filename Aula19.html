@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 19</title>
+</head>
+<body>
+    <script>
+
+        var num
+// ------------------------ 1° MANEIRA ------------------------ //
+        num = 0
+        while(num<10)
+        {
+         // num++ começa do 1
+            document.write("Teste<br>")
+            num++
+        }
+
+        document.write("<hr>") // Cria uma linha de separação
+// ------------------------ 2° MANEIRA ------------------------ //
+        num = 10
+        while(num--)
+        {
+            document.write("Testando<br>")
+        }
+
+        document.write("<hr>") // Cria uma linha de separação
+// ------------------------ 3° MANEIRA ------------------------ //
+        num=true
+        cont=0
+        while(num)
+        {
+            document.write("Testando<br>")
+            cont ++
+            if(cont>9)
+            {
+                num=false
+            }
+        }
+        
+    </script>
+</body>
+</html>
