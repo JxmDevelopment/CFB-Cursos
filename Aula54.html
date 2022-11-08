@@ -119,35 +119,34 @@
         var l,c
         // LINHAS
         for(l=0;l<3;l++)
-        {
+          {
             if
-            (
-                (jogo[l][0]==jogo[l][1])&&(jogo[l][1]==jogo[l][2])
-            )
+            ((jogo[l][0]==jogo[l][1])&&(jogo[l][1]==jogo[l][2]))
             {
                 return jogo[l][0]
             }
-        // COLUNAS
-        for(c=0;c<3;c++)
-        {
-            if
-            ((jogo[0][c]==jogo[1][c])&&(jogo[1][c]==jogo[1][c]))
+          }
+            // COLUNAS
+            for(c=0;c<3;c++)
             {
+             if((jogo[0][c]==jogo[1][c])&&(jogo[1][c]==jogo[1][c]))
+              {
                 return jogo[c][0]
+              }
             }
+            // DIAGONAIS
+            if((jogo[0][0]==jogo[1][1])&&(jogo[1][1]==jogo[2][2]))
+            {
+              return jogo[0][0]
+            }
+            // DIAGONAIS
+            if((jogo[0][2]==jogo[1][1])&&(jogo[1][1]==jogo[2][0]))
+            {
+              return jogo[0][2]
+            }
+            return ""
         }
-        // DIAGONAIS
-        if((jogo[0][0]==jogo[1][1])&&(jogo[1][1]==jogo[2][2]))
-        {
-            return jogo[0][0]
-        }
-        // DIAGONAIS
-        if((jogo[0][2]==jogo[1][1])&&(jogo[1][1]==jogo[2][0]))
-        {
-            return jogo[0][2]
-        }
-        return ""
-      }
+    
 
       function jogar(p) // Parâmetro | Para verificar se está disponivel, etcs
       {
@@ -231,7 +230,7 @@
             cpuJoga()
           }
         }
-    }
+     }
         
         function atualizaTabuleiro()
         {
@@ -268,15 +267,14 @@
             ["","",""], // |1,0|1,1|1,2|
             ["","",""]  // |2,0|2,1|2,2|
           ]
-        }
-        tabuleiro=
-        [
+          tabuleiro=
+          [
             [document.getElementById("p1"),document.getElementById("p2"),document.getElementById("p3")],
             [document.getElementById("p4"),document.getElementById("p5"),document.getElementById("p6")],
             [document.getElementById("p7"),document.getElementById("p8"),document.getElementById("p9")]
-        ]
-      }
-      window.addEventListener("load",inicia)
+          ]
+        }
+        window.addEventListener("load",inicia)
       
     </script>
 </head>
@@ -310,6 +308,6 @@
 |2,0|2,1|2,2|
 -------------
  P7  P8  P9
-
+ 
 */
 </script>
