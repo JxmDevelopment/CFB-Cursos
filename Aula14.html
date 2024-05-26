@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 14</title>
+</head>
+<body>
+    <script>
+
+        var itens=["Faca","Pederneira","Corda","Lanterna","Luvas","Chave","Arame"]
+        var mochila=[]
+
+        mochila.push("Faca")
+        mochila.push("Corda")
+        mochila.push("Pederneira")
+        mochila.push("Chave")
+        mochila.push("Lanterna") // Push adiciona no final do array
+        mochila.unshift("Pedra") // Unshift adiciona no inicio do Array
+        mochila.pop() // Remove o ultimo elemento do Array
+        mochila.shift() // Remove o primeiro elemento do Array ( removeu o 'Pedra' que estava em primeiro lugar por causa do 'unshift')
+        mochila.splice(0,5) // A partir de qual item: '0' quantos itens quer remover: '5'
+
+        document.write(mochila[0]+"<br>")
+        document.write(mochila[1]+"<br>")
+        document.write(mochila[2]+"<br>")
+        document.write(mochila[3]+"<br>")
+        document.write(mochila[4]+"<br>")
+        document.write(mochila[5]+"<br>")
+        
+    </script>
+</body>
+</html>
+
+// unshift -> deslocar ( Joga Inicio )
+// shift -> mudança ( Remove 1° )
+// push -> Empurre ( Joga Final )
+// pop -> estourar ( Remove Ultimo )
