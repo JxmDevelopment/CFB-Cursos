@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 74</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        function inicia()
+        {
+            document.getElementById("btnDestaque").addEventListener("click",function()
+            {
+                var num=document.getElementById("fnum").value
+                var p=document.getElementsByTagName("p")
+                for(i=0;i<p.length;i++)
+                {
+                    p[i].removeAttribute("style")
+                }
+                var at=document.createAttribute("style")
+                at.value="color:#f00;"
+                p[num].setAttributeNode(at)
+            })
+        }
+        window.addEventListener("load",inicia)
+
+    </script>
+</head>
+<body>
+    <input type="text" id="fnum"><button id="btnDestaque">Destacar</button><br><br>
+    <p>Linha 00</p>
+    <p>Linha 01</p>
+    <p>Linha 02</p>
+    <p>Linha 03</p>
+    <p>Linha 04</p>
+    <p>Linha 05</p>
+    <p>Linha 06</p>
+    <p>Linha 07</p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 70</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script> // LOCAL STORAGE | WEB STORAGE
+
+    if(typeof(Storage)!="undefine")
+    {        
+        if(localStorage.visitas)
+        {
+            localStorage.visitas=Number(localStorage.visitas)+1 // Acrescenta +1 Visita A Cada Visita
+        }
+        else
+        {
+        // localStorage.setItem("Visitar", "1")
+           localStorage.visitas=1
+        }
+        document.write("visitas: " +localStorage.visitas)
+    }
+    else
+    {
+        document.write("Sem Suporte Ao Web Storage")
+    }
+    </script>
+</head>
+<body>
+</body>
+</html>

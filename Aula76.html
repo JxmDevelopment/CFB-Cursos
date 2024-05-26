@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 76</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        function inicia()
+        {
+            
+            // COM CREATE ELEMENT
+            var novoH1=document.createElement("h1")
+            var sub=5; // Substituir o elemento 5 (Linha 02)
+            var listaLinhas=document.getElementById("javascript")
+            var antigoP=listaLinhas.childNodes[sub] // Ou coloocar o [5]
+            var txtH=document.createTextNode(antigoP.innerHTML)
+            novoH1.appendChild(txtH)
+            listaLinhas.replaceChild(novoH1,antigoP) // Substitui um elemento por outro elemento
+            
+            // SEM CREATE ELEMENT
+            var antigoP2=listaLinhas.childNodes[9]
+            var novo=document.getElementById("Lnovo")
+            listaLinhas.replaceChild(Lnovo,antigoP2)
+
+        }
+        window.addEventListener("load",inicia)
+
+    </script>
+</head>
+<body>
+    <h1 id="Lnovo">Novo Elemento</h1>
+    <div id="javascript">
+        <p>Linha 00</p>
+        <p>Linha 01</p>
+        <p>Linha 02</p>
+        <p>Linha 03</p>
+        <p>Linha 04</p>
+        <p>Linha 05</p>
+        <p>Linha 06</p>
+        <p>Linha 07</p>
+    </div>
+</body>
+</html>

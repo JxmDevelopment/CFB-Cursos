@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 77</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        function inicia()
+        {
+            var elemento=document.getElementById("p5")
+            document.getElementById("p2").remove() // Removeu o elemento p2
+            //elemento.remove()
+            alert(elemento.parentNode.nodeName) // Nome do elemento p5
+            //alert(elemento.parentNode) // Informação do elemento
+        }
+        window.addEventListener("load",inicia)
+
+    </script>
+</head>
+<body>
+    <div id="javascript">
+        <p id="p1">Linha 01</p>
+        <p id="p2">Linha 02</p>
+        <p id="p3">Linha 03</p>
+        <p id="p4">Linha 04</p>
+        <p id="p5">Linha 05</p>
+        <p id="p6">Linha 06</p>
+        <p id="p7">Linha 07</p>
+        <p id="p8">Linha 08</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 75</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        function inicia()
+        {
+            document.getElementById("btnContar").addEventListener("click",function()
+            {
+                var lista=document.getElementById("listaElementos")
+                var num=lista.childNodes.length // Conta o número de ul
+                alert(num)
+            })
+            document.getElementById("btnAdd").addEventListener("click",function()
+            {
+                var lista=document.getElementById("listaElementos")
+                var texto=document.getElementById("fnovo")
+                var li=document.createElement("li")
+                li.textContent=texto.value
+                lista.insertBefore(li,lista.childNodes[0]) // Inserir antes
+                texto.value=""
+                texto.focus() // Posicionar Cursor 
+            })
+        }
+        window.addEventListener("load",inicia)
+
+    </script>
+</head>
+<body>
+    <input type="text" id="fnovo"><button id="btnAdd">Adicionar</button><button id="btnContar">Contar</button><br><br>
+    <ul id="listaElementos"></ul>
+</body>
+</html>

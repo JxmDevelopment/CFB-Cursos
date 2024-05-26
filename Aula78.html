@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 78</title>
+    <meta charset="UTF-8">
+    <style>
+        .estilo1{color:#88f}
+        .estilo2{color:#f88}
+    </style>
+    <script>
+
+        function inicia()
+        {
+            var elemento=document.getElementById("p1")
+            var att=elemento.getAttribute("class") // Pega o attributo class
+            console.log(att)
+        }
+        window.addEventListener("load",inicia)
+
+    </script>
+</head>
+<body>
+    <div id="javascript">
+        <p id="p1" class="estilo1">Linha 01</p>
+        <p id="p2" class="estilo2">Linha 02</p>
+        <p id="p3" class="estilo1">Linha 03</p>
+        <p id="p4" class="estilo2">Linha 04</p>
+        <p id="p5" class="estilo1">Linha 05</p>
+        <p id="p6" class="estilo2">Linha 06</p>
+        <p id="p7" class="estilo1">Linha 07</p>
+        <p id="p8" class="estilo2">Linha 08</p>
+    </div>
+</body>
+</html>

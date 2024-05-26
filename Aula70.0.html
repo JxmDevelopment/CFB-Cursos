@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 70</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script> // LOCAL STORAGE | WEB STORAGE
+
+    if(typeof(Storage)!="undefined")
+    {        
+        localStorage.setItem("canal","CFB Cursos") // [ Console -> Application -> Local Storage -> File:// ]
+        localStorage.removeItem("canal")
+
+     // var vcanal=localStorage.getItem("canal") [ Uma Opção Também ]
+        var vcanal=localStorage.canal
+        document.write(vcanal)
+    }
+    else
+    {
+        document.write("Sem Suporte Ao Web Storage")
+    }
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 68</title>
+    <meta charset="UTF-8">
+    <style>
+        body
+        {
+            background-color: #f00;
+            color: #fff;
+        }
+        a{color: #fff;}
+    </style>
+    <script>
+
+        var aux=location.hash
+        var dados=aux.split("#") // Caractere De Divisão
+        var v1=dados[1]
+        var v2=dados[2]
+        document.write(v1)
+        document.write("<br>")
+        var h=location.hostname // NOME DO SITE | "DOMINIO"
+        document.write(h + "<br>")
+        var href=location.href // ONDE ESTÁ O ARQUIVO
+        document.write(href + "<br>")
+        var o=location.origin // PROTOCOLO, HOSTNAME, PORTA
+        document.write(o + "<br>")
+        var p=location.pathname // CAMINHO    HTTPS [Protocolo] WWW.YOUTUBE.COM [HOSTNAME] /USER [PATH]
+        document.write(p + "<br>")
+        var port=location.port // PORTA
+        document.write(port + "<br>")
+        var pr=location.protocol // PROTOCOLO
+        document.write(pr + "<br>")
+        //var ref=location.href="https://youtube.com.br" // MOVE PARA A REFERÊNCIA SELECIONADA
+        //document.write(ref)
+        document.write("<hr>")
+
+    </script>
+</head>
+<body>
+    <h1>Página 2</h1>
+    <a href="Aula68.0.html">Voltar</a>
+</body>
+</html>

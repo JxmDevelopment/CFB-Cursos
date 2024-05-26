@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 64</title>
+    <meta charset="UTF-8">
+    <style>
+    </style>
+    <script> // [ VERIFICAR QUANTIDADE DE FRAMES ]
+
+        function inicia()
+        {
+            var qtde=window.length
+            var painel=document.getElementById("painel").innerHTML=qtde
+            for(var i=0;i<qtde;i++)
+            {
+                window.frames[i].location="https://cfbcursos.com.br" // Todos os frames recebe o mesmo valor
+            }
+            // window.frames[0].location="https://cfbcursos.com.br" // Posso escolher em qual frame eu quero que apareça
+        }
+        window.addEventListener("load",inicia)
+
+    </script>
+</head>
+<body>
+    <iframe src=""></iframe>
+    <iframe src=""></iframe>
+    <iframe src=""></iframe>
+
+    <div id="painel"></div>
+</body>
+</html>

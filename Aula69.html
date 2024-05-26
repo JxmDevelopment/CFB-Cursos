@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 69</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+        
+        //location.assign("https://youtube.com") // Redireciona
+        //location.replace("https://youtube.com") // Redireciona [ Remove URL do histórico ]
+
+        function p2() // IR P2
+        {
+            location.replace("Aula01.html") // Não permite voltar a página pelo histórico '<-'
+        }
+        function rec()
+        {
+            location.reload()
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Objeto Location</h1>
+    <button id="btnP2" >Página 2</button>
+    <button id="btnReload" onclick="rec()">Recarregar</button>
+</body>
+</html>
