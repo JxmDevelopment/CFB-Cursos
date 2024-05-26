@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 115</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        class Carro
+        {
+            constructor(tpCarro,tpComb)
+            {
+                this.tipo=tpCarro
+                this.tipoComb=tpComb
+            }
+            info()
+            {
+                console.log("Tipo De Carro....: " + this.tipo)
+                console.log("Tipo Combus......: " + this.tipoComb)
+            }
+        }
+        class CarroCombate extends Carro // herdeiro
+        {
+
+        }
+        let c1=new CarroCombate("Monster","Diesel")
+        //c1.info()
+
+        Carro.prototype.potencia=500
+        Carro.prototype.velocidade=0
+        Carro.prototype.velMax=0
+
+        Carro.prototype.info2=function() // Func Info2
+        {
+            this.info() // Chamou o 'c1.info()'
+            console.log("Potência....: " + this.potencia)
+            console.log("Velocidade..: " + this.velocidade)
+            console.log("Vel. Máxima.: " + this.velMax)
+        }
+        c1.info2() // Call Info2
+
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

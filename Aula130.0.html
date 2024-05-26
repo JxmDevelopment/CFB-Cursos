@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 130.0</title>
+    <meta charset="UTF-8">
+</head>
+    <body>
+        <canvas id="desenho" width="500" height="500" style="border:1px solid #000">
+            <h3>Este browser não tem suporte ao canvas</h3>
+        </canvas>        
+        <script>
+            let canvas=document.getElementById("desenho")
+            let ctx=canvas.getContext("2d")
+
+            let tamMax=40
+            let tamMin=10
+            let maxCirculos=50
+
+            function desenha()
+            {
+                //posX, posY, raio, angIni, angFim, sentido
+                //sentido: true=horario / false=anti-horario
+                //(PI/180)*ang_grau
+                for(let i=0;i<maxCirculos;i++)
+                {
+                    ctx.beginPath() // Irá desenhar vários círculos na mesma posição ( por conta do loop )
+                    ctx.fillStyle='rgb('+Math.random()*255+','+Math.random()*255+','+Math.random()*255+')'
+                    ctx.arc(Math.random()*500,Math.random()*500,Math.random()*tamMax+tamMin,(Math.PI/180)*0,(Math.PI/180)*360,true) // Variando de 0 a 500 ( tamanho do canvas )
+                    ctx.fill() //                                             Vai variar de 10 a 50 (Random de 10 + random de 40)
+                }
+                requestAnimationFrame(desenha)
+            }
+            desenha()
+        </script>
+    </body>
+</html>

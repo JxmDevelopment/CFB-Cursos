@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 114</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        class Carro
+        {
+            constructor(tpCarro,tpComb)
+            {
+                this.tipo=tpCarro
+                this.tipoComb=tpComb
+            }
+            info()
+            {
+                console.log("Tipo De Carro....: " + this.tipo)
+                console.log("Tipo Combus......: " + this.tipoComb)
+            }
+        }
+        class CarroCombate extends Carro // herdeiro
+        {
+
+        }
+        let c1=new CarroCombate("Monster","Diesel")
+        c1.info()
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

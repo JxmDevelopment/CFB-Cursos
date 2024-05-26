@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 116.1</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        function somaPositivos(n1,n2)
+        {
+            let p = new Promise ((res,rej)=>
+            {
+                if(n1>=0 && n2>=0)
+                {
+                    res(n1+n2)
+                }
+                else
+                {
+                    rej('ERRO')
+                }
+            })
+                return p
+        }
+
+       somaPositivos(10,2)
+       .then(correto => console.log('Correto: ' + correto))
+       .catch(errado => console.log(errado))
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

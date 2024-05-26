@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 124</title>
+    <meta charset="UTF-8">
+        <script>
+            function desenha() // Função criada para criar o 'onload' e carregar o style mesmo estando dentro do 'HEAD'
+            {
+            var canvas=document.getElementById("desenho")
+            var ctx=canvas.getContext('2d')
+            
+            ctx.fillStyle="#00f" //fillStyle = Preenchimento
+            ctx.rect(50,50,200,200) // Desenha um retângulo preenchido 'Utiliza o style setado anteriormente'
+            ctx.fill()
+
+            ctx.clearRect(50,50,100,100) // Apaga determinada área [50 por 50, em uma área 50x50]
+            }
+        </script>
+</head>
+<body onload="desenha()">
+
+    <canvas id="desenho" width="500" height="500" style="border:1px solid #000">
+        <h3>Este browser não tem suporte ao canvas</h3>
+    </canvas>
+</body>
+
+</html>

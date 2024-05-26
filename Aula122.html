@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 122</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        let ColabJSON='{"colaboradores":['+
+                '{"nome":"Usuario 1","salario":1000,"idade":20},' +
+                '{"nome":"Usuario 2","salario":2000,"idade":25},' +
+                '{"nome":"Usuario 3","salario":3000,"idade":30},' +
+                '{"nome":"Usuario 4","salario":4000,"idade":35},' +
+                '{"nome":"Usuario 5","salario":5000,"idade":40}'+
+            ']}'
+
+        let c_JSON=JSON.parse(ColabJSON) // Converte o JSON para texto / string
+
+        console.log(c_JSON.colaboradores[0].nome)
+        console.log(c_JSON.colaboradores[1].salario)
+        console.log(c_JSON.colaboradores[2].idade)
+
+        let ColabOBJ=
+            [
+                {"nome":"Usuario 1","salario":10000,"idade":40},
+                {"nome":"Usuario 2","salario":10000,"idade":40},
+                {"nome":"Usuario 3","salario":10000,"idade":40},
+                {"nome":"Usuario 4","salario":10000,"idade":40},
+                {"nome":"Usuario 5","salario":10000,"idade":40}
+            ]
+
+            let c_OBJ=JSON.stringify(ColabOBJ)
+            console.log('--------------')
+            console.log(c_OBJ)
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

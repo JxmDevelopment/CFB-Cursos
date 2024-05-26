@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 116.2</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+
+        function contarPT(n)
+        {
+            let cont=0
+            let p = new Promise((resolve,rejected)=>
+            {
+                let t=setTimeout(()=>
+                {
+                 for(let i=0;i<n;i++)
+                    {
+                    cont++
+                    }
+                    if(cont == n)
+                    {
+                      resolve(cont)
+                    }
+                    else
+                    {
+                    rejected('ERRADO')
+                    }
+                },2000)
+            })
+            return p
+        }
+        contarPT(10) // Aguarda os 2 segundos do TimeOut, mas não ignora o TimeOut
+        .then(certo => console.log('Correto: ' + certo))
+        .catch(errado => console.log(errado))
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

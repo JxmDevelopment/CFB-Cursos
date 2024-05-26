@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 126</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+    <canvas id="desenho" width="500" height="500" style="border:1px solid #000">
+    <h3>Este browser não tem suporte ao canvas</h3>
+    </canvas>
+
+    <script>
+        var canvas=document.getElementById("desenho")
+        var ctx=canvas.getContext('2d')
+
+        let dx=1
+        let px=0
+        let py=10
+        let l_ret=a_ret=50
+        let l_canvas=a_canvas=500
+
+        function desenha()
+        {
+            ctx.clearRect(0,0,l_canvas,a_canvas)
+            ctx.fillStyle="#f00"
+            ctx.fillRect(px,py,l_ret,a_ret)
+            px+=dx  
+            
+            /*if(px+l_ret>=l_canvas) // Se o 'px' + 'largura do retângulo' >= 'largura do canvas'
+            {
+                dx=-1
+            }
+            if(px<=0)
+            {
+                dx=1
+            }*/
+
+            if((px+l_ret>=l_canvas) || (px<=0))
+            dx*=-1 // Se for 1, passa a valer -1 | se for -1, passa a valer 1
+            requestAnimationFrame(desenha)
+        }
+        desenha()
+    </script>
+
+</body>
+
+</html>

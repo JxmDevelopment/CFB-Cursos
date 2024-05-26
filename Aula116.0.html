@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 116</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        function contar(n)
+        {
+            let cont=0
+            for(let i=0;i<n;i++)
+            {
+                cont++
+            }
+            return cont
+        }
+        
+
+        function contarT(n)
+        {
+            let cont=0
+            let t=setTimeout(()=>
+            {
+            for(let i=0;i<n;i++)
+            {
+                cont++
+            }
+            },2000)
+            return cont
+        }
+        
+        function contarP(n)
+        {
+            let cont=0
+            let p = new Promise((resolve,rejected)=>
+            {
+                for(let i=0;i<n;i++)
+                {
+                    cont++
+                }
+                if(cont == n)
+                {
+                    resolve(cont) //.then()
+                }
+                else
+                {
+                    rejected('ERRO') //.catch()
+                }
+            })
+            return p
+        }
+        console.log(contar(10000)) // 10.000
+        console.log(contarT(10)) // 0
+        console.log(contarP(10)) // Promise
+
+        contarP(10)
+        .then(certo => console.log('Sucesso: ' + certo))
+        .catch(erro => console.log(erro))
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 132</title>
+    <meta charset="UTF-8">
+</head>
+    <body>
+        <img src="cores.PNG"/><br/>
+        <canvas id="desenho" width="500" height="500" style="border:1px solid #000">
+            <h3>Este browser não tem suporte ao canvas</h3>
+        </canvas>        
+        <script>
+            let canvas=document.getElementById("desenho")
+            var ctx=canvas.getContext("2d")
+
+            let cores=new Image()
+            cores.src="cores.png"
+            /*cores.onload=()=>
+            {
+                ctx.drawImage(image,x,y)
+            }*/
+            cores.addEventListener('load',()=>
+            {
+                          // image, Pos.X-Inicial, Pos.I-Inicial, Larg-Recorte, Alt-Recorte, pos.X-ColocarIMG, pos.Y-ColocarIMG, Larg.imagem, Alt.imagem
+                ctx.drawImage(cores,85,0,50,50,0,0,200,200)
+              //ctx.drawImage(cores,0,0,100,100) //[IMG,POS.X,POS.Y,ALT,LARG]  
+            })
+
+        </script>
+    </body>
+</html>

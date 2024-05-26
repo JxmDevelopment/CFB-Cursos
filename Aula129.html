@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 129</title>
+    <meta charset="UTF-8">
+</head>
+    <body>
+        <canvas id="desenho" width="500" height="500" style="border:1px solid #000">
+            <h3>Este browser não tem suporte ao canvas</h3>
+        </canvas>        
+        <script>
+            let canvas=document.getElementById("desenho")
+            let ctx=canvas.getContext("2d")
+
+            function desenha()
+            {
+                //posX, posY, raio, angIni, angFim, sentido
+                //sentido: true=horario / false=anti-horario
+                //(PI/180)*ang_grau
+                ctx.fillStyle='#000'
+                ctx.arc(100,100,100,(Math.PI/180)*0,(Math.PI/180)*90,true)
+                ctx.fill()
+                ctx.beginPath() // Para começar outra fórmula ( na mesma posição )
+                ctx.fillStyle='#f00'
+                ctx.arc(100,100,100,(Math.PI/180)*0,(Math.PI/180)*90,false)
+                ctx.fill()
+            }
+            desenha()
+        </script>
+    </body>
+</html>

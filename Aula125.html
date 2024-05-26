@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 125</title>
+    <meta charset="UTF-8">
+        <script>
+            function desenha()
+            {
+                var px=50
+                var py=50
+                var canvas=document.getElementById("desenho")
+                var ctx=canvas.getContext('2d')
+
+                ctx.moveTo(0,0) // Move o 'lápis'
+                ctx.lineTo(250,250) // Desenha a linha
+                ctx.lineTo(400,250)
+                ctx.lineTo(400,100)
+                ctx.moveTo(250,250)
+                ctx.lineTo(200,300)
+                ctx.stroke()
+            }
+        </script>
+</head>
+<body onload="desenha()">
+
+    <canvas id="desenho" width="500" height="500" style="border:1px solid #000">
+        <h3>Este browser não tem suporte ao canvas</h3>
+    </canvas>
+</body>
+
+</html>
