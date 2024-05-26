@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 24</title>
+
+    <script>
+
+    </script>
+
+</head>
+<body>
+    <p id="texto">Video Aula 24</p>
+    <div id="dv">Texto da DIV</div>
+    <input type="text" id="cxtexto" value="Caixa De Texto"> 
+
+    <script>
+      
+        // InnerHTML muda o título
+        var cxt=document.getElementById("texto")
+        var dv=document.getElementById("dv")
+
+      //document.getElementById("texto").innerHTML="Ué Vamos Ver"
+        cxt.innerHTML="Ué Vamos Ver" // Muda o título
+    
+      //document.getElementById("dv").innerHTML="Novo Texto"
+        dv.innerHTML="Novo Texto"
+
+      //alert(document.getElementById("dv").innerHTML)
+        alert(dv.innerHTML)
+        
+    </script>
+</body>
+</html>

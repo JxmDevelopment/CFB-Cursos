@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 28</title>
+    <meta charset="UTF-8">
+    
+</head>
+<body>
+    <script>
+
+        var dt=new Date()
+        var diasem=dt.getDay() // document.write(new Date().getDay())
+        var dia=dt.getDate() // +2  -> Aumenta 2 Dias
+        var mes=dt.getMonth() // +temp -> Aumenta 2 Meses
+        var ano=dt.getFullYear()
+
+        var horas=dt.getHours()
+        var minutos=dt.getMinutes()
+        var segundos=dt.getSeconds()
+
+        document.write(+ diasem + " , " + dia + " de " + mes + " de " + ano + "<br><br>") //  Ele pega apenas números em: Dia da semana | Mês
+
+        var meses=new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
+        var semanas= new Array("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado")
+
+        document.write(semanas[diasem] + " , " + dia + " de " + meses[mes] + " de " + ano + "<br><br>")
+        document.write(horas + ":" + minutos + ":" + segundos)
+
+    </script>
+</body>
+</html>

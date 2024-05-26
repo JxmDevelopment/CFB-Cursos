@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 27</title>
+    <meta charset="UTF-8">
+    <style>
+        label
+        {
+            display: block
+        }
+        input
+        {
+            display: block
+        }
+        input[type=submit], label
+        {
+            margin-top:10px
+        }
+        </style>
+</head>
+<body>
+    <form name="Janela1" id="Janela1" action="#" method="post">
+        <label>Nome</label>
+        <input type="text" name="fNome" id="teste" value="Janela 1">
+        <label>Senha</label>
+        <input type="password" name="fSenha" value="123">
+        <input type="submit" name="btEnviar" value="Enviar">
+    </form>
+    <form name="Janela2" id="Janela2" action="#" method="post">
+        <label>Nome</label>
+        <input type="text" name="fNome" id="teste" value="Janela 2">
+        <label>Senha</label>
+        <input type="password" name="fSenha" value="123">
+        <input type="submit" name="btEnviar" value="Enviar">
+    </form>
+    <hr> 
+    <script>
+
+        // PUXA UMA POSIÇÃO NO ÍNDICE (forms/id) ou com ID (innerHTML)
+        //var fm=document.forms[0].id
+        //var fm=document.forms.item(0).id
+        //var fm=document.forms.namedItem("Janela1").id
+        //var fm=document.forms.namedItem("Janela1").innerHTML
+        //var fm=document.forms.namedItem("Janela1").elements[0].value // (Label não conta) (Será o Input) -> value="Janela 1"
+        var fm=document.forms[0].elements
+        fm[0].style.backgroundColor="#ddd" // Formulário [ Posição 1 ]
+        fm[0].value="Del"
+        //document.write(fm)
+        
+    </script>
+</body>
+</html>
