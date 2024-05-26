@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 107</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        let num=[10,1,9,2,8,3,7,6,4,5]
+        for(n of num)
+        console.log(n)
+        // Iterator
+        let it=num[Symbol.iterator]()
+        console.log(it.next()) // Irá dar o valor 10
+        console.log(it.next()) // 1
+        console.log(it.next()) // 9
+        console.log(it.next()) // 2
+
+        for(i=0; i<num.length; i++)
+        {
+            let next=it.next().value
+            next%2 > 0 ? console.log("Impar") : console.log("Par")
+        }
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

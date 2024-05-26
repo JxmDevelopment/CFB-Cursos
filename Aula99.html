@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 99</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        const aluno={nome:"Jardel",sobrenome:"Xavier"}
+        const notas={n1:80,n2:75,n3:92,n4:85}
+        const info={...aluno,...notas}
+
+        for(var dado in aluno) // in para percorrer objetos
+        {
+             console.log(aluno[dado])
+             //console.log(info[dado])
+        }
+
+        let valores=[100,80,75,30,64,47,98,81,60]
+        
+        for(var n of valores) // of para percorrer valores
+        {
+            console.log(n)
+        }
+
+        let values=[100,80,75,30,64,47,98,81,60]
+        let aprovados=0
+        let reprovados=0
+
+        for(var v of values)
+        {
+            n>=60?aprovados++:reprovados++
+        }
+        
+        console.log("Aprovados: " + aprovados)
+        console.log("Reprovados: " + reprovados)
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

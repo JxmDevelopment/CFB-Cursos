@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 104.1</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        function* cont(n)
+        {
+            let c=0
+            while(c<n)
+            {
+                console.log(c)
+                c++
+            }
+        }
+        const ct=cont(10)
+        console.log(ct.next()) // Função geradora precisa do Next()
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

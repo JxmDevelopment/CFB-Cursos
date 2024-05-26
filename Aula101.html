@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 101</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+        // Função Anonima
+        const alo=function ()
+        {
+            return "Hello World"
+        }
+        console.log(alo())
+
+        let soma=function(...num)
+        {
+            let resp = 0
+            for (n of num)
+            {
+                resp +=n
+            }
+            return resp
+        }
+        let s=soma
+
+        console.log(soma(1,2,3))
+        console.log(soma(1,2))
+        console.log(s(1))
+        console.log(s)
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

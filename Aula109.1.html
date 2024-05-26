@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 109</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        let produtos = new Map
+        (
+            [
+                ["01","Mouse"],
+                ["02","Teclado"],
+                ["03","Monitor"],
+                ["04","Gabinete"]
+            ]
+        )
+        produtos.set("05","Memoria")
+
+        console.log(produtos.has("02")) // Verifica se tem ou não (true/false)
+        console.log(produtos.has("02") ? "Produto encontrado" : "Não está na lista")
+
+        function info(chave,valor) // Organizou os produtos com chave + valor
+        {
+            console.log("Chave: " + chave + " - Valor: " + valor)
+        }
+        //produtos.forEach(info) // Cria o 'loop' para percorrer a array
+        let itk=produtos.keys()
+        let itv=produtos.values()
+        console.log(itk.next().value)
+        console.log(itv.next().value)
+        
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

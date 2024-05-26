@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 110</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        class Carro
+        {
+            //cor="Vermelho"
+            constructor()
+            {
+                this.cor="Vermelho" // - Se não referenciar com o 'this' ele irá criar uma variável
+                console.log("Olá, sou um novo carro " + this.cor)
+            }
+        }
+
+        let c1=new Carro()
+        let c2=new Carro()
+        let c3=new Carro()
+        let c4=new Carro()
+
+        //
+
+        class Carros
+        {
+            constructor(cores)
+            {
+                this.cores=cores
+                console.log("Olá, sou um novo carro " + this.cores)
+            }
+        }
+        let c5=new Carros("Vermelho")
+        let c6=new Carros("Verde")
+        let c7=new Carros("Azul")
+        let c8=new Carros("Amarelo")
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

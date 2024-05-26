@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 89</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        setInterval(foco,0)
+
+        function foco()
+    {
+        var res=document.getElementById("simnao")
+        if(document.hasFocus())
+        {
+            res.innerHTML="" // Se tiver em foco ele vai receber a msg da div "dvmsg"
+        }
+        else
+        {
+            res.innerHTML="não" // Recebe o não quando não está em foco
+        }
+    }
+
+    </script>
+</head>
+
+<body>
+
+    <div id="dvmsg">Página <span id="simnao"></span> está em foco</div>
+
+</body>
+
+</html>

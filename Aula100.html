@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 100</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        function soma(n1, n2, n3)
+        {
+            let res = n1 + n2 + n3
+            return res
+        }
+        console.log(soma(1, 2, 3))
+
+        function valor(...num) // REST
+        {
+            let res = 0
+            let qtd = num.length
+            for (let i = 0; i < qtd; i++)
+            {
+                res +=num[i]
+            }
+            return res
+        }
+        console.log(valor(3, 2, 1, 6, 8))
+
+        function value(...num) // OF
+        {
+            let resp = 0
+            for (n of num)
+            {
+                resp +=n
+            }
+            return resp
+        }
+        console.log(value(3, 2, 1, 6, 8))
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

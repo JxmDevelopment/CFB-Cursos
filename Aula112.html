@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 112</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        class Carro
+        {
+            constructor(marca,modelo,cor)
+            {
+                this.marca=marca
+                this.modelo=modelo
+                this.cor=cor
+                this.ligado=false
+                this.km=0
+                this.comb=10
+            }
+            info()
+            {
+                console.log("Marca......: " + this.marca)
+                console.log("Modelo.....: " + this.modelo)
+                console.log("Cor........: " + this.cor)
+                console.log("Ligado.....: " + (this.ligado ? "Sim" : "Não")) // Entre ()
+                console.log("KM.........: " + this.km)
+                console.log("Combustível: " + this.comb)
+                console.log("------------------------") // Separar
+            }
+            ligar()
+            {
+                this.ligado=true
+            }
+            desligar()
+            {
+                this.ligado=false
+            }
+            set combustivel(v) // Set definir o valor de um atributo
+            {
+                if(v<0 || v>100)
+                    {
+                        alert("Valor Inválido")
+                    }
+                    else
+                    {
+                    this.comb=v
+                    console.log("Combustível alterado, valor atual: " + this.comb)
+                    }
+            }
+            get GComb() // Obter o valor de um atributo
+            {
+                return this.comb
+            }
+
+        }
+        let c1=new Carro("Honda","HRV","Prata") // Cores atribuidas inicialmente
+        let c2=new Carro("VW","Golf","Branco")
+        let c3=new Carro("GM","Camaro","Preto")
+        let c4=new Carro("Ford","Mustang","Vermelho")
+
+        c1.combustivel=50 // Seta o combustível do carro 1 para 50.
+        console.log(c1.GComb) // Obteve o valor do atributo.
+
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

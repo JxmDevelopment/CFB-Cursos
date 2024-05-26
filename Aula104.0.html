@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 104.0</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+        // Função geradora
+        function* cores()
+        { // yield cria a pause "aguarda por um next"
+           yield 'Vermelho';
+           yield 'Verde';
+           yield 'Azul';
+           yield 'Amarelo';
+           yield 'Roxo';
+           yield 'Preto';
+           yield 'Branco';
+        }
+        
+        for(let c of cores())
+        {
+            console.log(c)
+        }
+
+        const c=cores()
+        console.log(c) // Aparece suspenso pois ela esta parada
+        console.log(c.next()) // Vermelho
+        console.log(c.next()) // Verde
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

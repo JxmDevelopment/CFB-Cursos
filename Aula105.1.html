@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 105.1</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        const Veiculo =
+        {
+            marca: "VW",
+            modelo: "Golf",
+            info: function ()
+            {
+                console.log("Marca: " + this.marca)
+                console.log("Marca: " + this.modelo)
+            }
+        }
+        const Caracteristicas=
+        {
+            cor:"Cinza",
+            Cambio:"Automatico",
+        }
+        
+        // delete Caracteristicas.cor -> Deleta uma propriedade
+        const Carro=Object.assign(Veiculo,Caracteristicas) // assign faz a mesclagem "junta"
+        console.log(Carro)
+        //Carro.info() -> Ainda funciona
+
+        //
+
+        let {marca,modelo} = Carro
+        console.log(marca)
+        console.log(modelo)
+        console.log(Carro)
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

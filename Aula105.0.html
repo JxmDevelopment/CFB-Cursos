@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 105.0</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        const Carro=
+        {
+            marca:"VW",
+            modelo:"Golf",
+            info:function()
+        {
+            console.log("Marca: " + this.marca) //Função
+            console.log("Marca: " + this.modelo)
+        }
+        }
+        console.log(Carro.marca)
+        console.log(Carro.modelo)
+
+        Carro.info() // Chamando a função
+
+        // Reatribuindo valor a função
+
+        Carro.marca="Honda" 
+        Carro.modelo="HRV"
+
+        Carro.info() // Chamando a função novamente "Com o novo valor"
+
+        // Outra maneira
+
+        Carro["marca"]="GM"
+        Carro["modelo"]="Camaro"
+        //Carro.info()
+        console.log(Carro["marca"])
+        console.log(Carro["modelo"])
+
+        // Creando um novo objeto
+
+        const c2=Object.create(Carro)
+        c2.marca="Ford"
+        c2.modelo="Ranger"
+        c2.info()
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

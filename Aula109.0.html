@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 109</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        let produtos = new Map
+        (
+            [
+                ["01",["Mouse","R$10,75"]],
+                ["02",["Teclado","R$35,90"]],
+                ["03",["Monitor","R$420,50"]],
+                ["04",["Gabinete","R$150,00"]]
+            ]
+        )
+        produtos.set("05",["Memória","R$199,90"])
+
+        // produtos.clear()
+        //produtos.delete("03")
+        console.log("Tamanho: " + produtos.size)
+        for(p of produtos)
+        //console.log(p) // Retorna o array, e uma string onde tem outro array
+        //console.log(p[0]) // Retorna o array
+        //console.log(p[1]) // Retorna o array - obj + valor
+        //console.log(p[1][0]) // Retorna a descrição do produto
+        console.log(p[1][1]) // Retorna o valor do produto
+
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

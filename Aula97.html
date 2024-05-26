@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 97</title>
+    <meta charset="UTF-8">
+    <style></style>
+    <script>
+
+        const notas=[100,60,45,78,80,32,86]
+
+        function soma(n1,n2,n3)
+        {
+            return n1+n2+n3
+        }
+     // console.log(soma(notas[0],notas[1],notas[2]))
+        console.log(soma(...notas)) // Spread facilitou pois transformou cada número dentro da array em um elemento, podendo assim ser contabilizado.
+
+        console.log(notas) // array
+        console.log(...notas) // ... -> Spread
+        console.log(notas[2]) // 45
+
+        const jogador=[nome="Bruno", pontos=1000, vidas=7]
+        console.log(...jogador)
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
