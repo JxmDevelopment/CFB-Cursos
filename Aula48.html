@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 48</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <p id="txt">Curso de Javascript - Aula 46 do curso de javascript</p>
+    <script>
+
+        var texto1=document.getElementById("txt").innerHTML
+        var texto2="Curso de Javascript > Aula 46 do curso de javascript"
+     // var res=texto1.indexOf("j") // Posição da letra desejada
+     // var res=texto1.lastIndexOf("i") // Última posição encontrada
+     // var res=texto.slice(3,10) // Corta o texto da posição 3 até a posição 10
+
+     // var res=texto1.splite(" ") // Copia a palavra indicada no vetor abaixo
+     // document.write(res[3]) // 3 palavra, que seria 'Javascript'
+
+     // var res=texto1.substr(9,10) // [9] Posição inicial & [10] letras - tamanho do corte
+     // document.write(res)
+
+     // var res=texto1.toLowerCase() ~ Converte tudo para letra minúscula
+     // var res=texto1.toUpperCase() ~ Converte tudo para letra maiúscula
+     // document.write(res) 
+
+        var res=texto1.localeCompare(texto2)
+        if(res == 0)
+        {
+            document.write("String iguais")
+        }
+        else
+        {
+            document.write("String diferentes")
+        }
+
+    </script>
+</body>
+</html>

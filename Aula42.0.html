@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 42</title>
+    <meta charset="UTF-8">
+    <style>
+        table
+        {
+            border-collapse: collapse;
+        }
+        table,td,tr,th
+        {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="titulo"></div>
+    <table>
+        <tr>
+            <th>Alunos</th><th>Nota 1</th><th>Nota 2</th><th>Resultado</th>
+        </tr>
+        <tr>
+            <td>Al1</td><td>35</td><td>48</td><td id="n1">83</td>
+        </tr>
+        <tr>
+            <td>Al2</td><td>20</td><td>15</td><td id="n2">35</td>
+        </tr>
+        <tr>
+            <td>Al3</td><td>48</td><td>48</td><td id="n3">96</td>
+        </tr>
+        <tr>
+            <td>Al4</td><td>10</td><td>50</td><td id="n4">60</td>
+        </tr>
+    </table>
+    <script>
+
+     // var notaFixada = notaFinal.toFixed(1) -> Passa para 1 o número de digito na casa decimal
+        var n=[]
+        n[0]=document.getElementById("n1")
+        n[1]=document.getElementById("n2")
+        n[2]=document.getElementById("n3")
+        n[3]=document.getElementById("n4")
+        //alert(n[0].innerHTML)
+        for (var i=0;i<4;i++)
+        {
+            if(n[i].innerHTML < 70)
+            {
+                n[i].style.color="#f00" // vermelho
+            }
+            else
+            {
+                n[i].style.color="#00f" // azul
+            }
+        }
+
+    </script>
+</body>
+</html>

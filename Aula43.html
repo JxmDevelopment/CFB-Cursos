@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 43</title>
+    <meta charset="UTF-8">
+    <style>
+        #dvslider
+        {
+            width:1000px;
+            height:300px;
+            border: 1px solid #000;
+        }
+    </style>
+    <script>
+
+        function preCarregamento() // pre-carregar a imagem
+        {
+            var s=1;
+            var slider;
+            var imgAtual;
+            var maxImg;
+            var tmp; // trocar imagem
+            var tempoTroca;
+
+            for(var i=0;i<5;i++)
+            {
+            imgs[i]= newImage();
+            imgs[i].src="imgs/s"+s+".jpg";
+            s++;
+            }
+        }
+
+        function carregarImg(img)
+        {
+            slider.style.backgroundImage="url('"+imgs[img].src+"')" // [img] ou [1]
+        }
+
+        function iniciar()
+        {
+            preCarregamento(); // Pre-carrega as imagens na memória
+            imgAtual=0; // Qual imagem vai ser mostrada
+            maxImg=imgs.length-1; // Porque ele vai dizer que a posição da última imagem é a 5, é a 4
+            slider=document.getElementById("dvslider") // Associo o elemento que vai receber as imagens
+            carregarImg(imgAtual); // Carrega a imagem, para o slider não ficar sem imagem
+            tmp=setInterval(troca,3000) // chama a função troca a cada 3 segundos
+            //tempoTroca=3000;
+            //tmp=setInterval(troca,tempoTroca)
+        }
+
+        function troca() // pular para a próxima imagem
+        {
+            imgAtual++
+            if(imgAtual>maxImg)
+            {
+                imgAtual=0 // Recomeçar o ciclo | Voltar para a primeira imagem
+            }
+            carregarImg(imgAtual)
+        }
+        window.addEventListener("load",iniciar)
+    </script>
+    
+</head>
+<body>
+    <div id="dvslider"></div>
+</body>
+</html>

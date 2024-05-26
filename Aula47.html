@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 47</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <p id="txt">Curso de Javascript - Aula 46 do curso de javascript</p>
+    <script>
+
+        var texto=document.getElementById("txt").innerHTML
+        var res=texto.replace(/curso/ig, "aula")
+        var res2=texto.charAt(4) // Mostra qual é o caracter na posição 4
+        var res3=texto.charCodeAt(20) // Mostra o código do caracter indicado
+     // document.write(res1)
+
+        var txt2=" - Este texto será incluso no texto da tag P"
+        var inc=texto.concat(txt2)
+     // var inc=texto.concat(" - Este texto será incluso no texto da tag P") ~> Também é válido
+        document.write(inc)
+
+    </script>
+</body>
+</html>
